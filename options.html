@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oxygen:wght@300;400&display=swap" rel="stylesheet">
+  <title>Weather App Options</title>
+  <style>
+    :root {
+      --color-primary: #141B2D;
+      --color-secondary: #1F2940;
+      --color-white: #fff;
+      --color-active: #70D6FF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      line-height: 1.6;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: var(--color-secondary);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .option-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .option-group__title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .radio-option label {
+      cursor: pointer;
+    }
+
+    button {
+      background-color: var(--color-active);
+      color: var(--color-primary);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #5bc0eb;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+
+    .status {
+      text-align: center;
+      margin-top: 1rem;
+      height: 1.5rem;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .status.show {
+      opacity: 1;
+    }
+
+    .status.success {
+      color: #2ecc71;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Weather App Settings</h1>
+    
+    <div class="option-group">
+      <h2 class="option-group__title">Default Temperature Units</h2>
+      <div class="radio-group">
+        <div class="radio-option">
+          <input type="radio" id="metric" name="units" value="metric">
+          <label for="metric">Celsius (°C)</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="imperial" name="units" value="imperial">
+          <label for="imperial">Fahrenheit (°F)</label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="option-group">
+      <h2 class="option-group__title">Auto Refresh Data</h2>
+      <div class="radio-group">
+        <div class="radio-option">
+          <input type="radio" id="refresh-15" name="refresh" value="15">
+          <label for="refresh-15">Every 15 minutes</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="refresh-30" name="refresh" value="30">
+          <label for="refresh-30">Every 30 minutes</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="refresh-60" name="refresh" value="60">
+          <label for="refresh-60">Every hour</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="refresh-manual" name="refresh" value="0">
+          <label for="refresh-manual">Manual refresh only</label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="buttons">
+      <button id="reset">Reset to Defaults</button>
+      <button id="save">Save Settings</button>
+    </div>
+    
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="src/js/options.js"></script>
+</body>
+</html> 

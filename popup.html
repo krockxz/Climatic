@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oxygen:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+  <script
+    defer
+    src="https://kit.fontawesome.com/f98879ca63.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="src/sass/popup.scss" />
+  <script defer type="module" src="src/js/popup.js"></script>
+  <title>Weather App</title>
+</head>
+<body class="theme-1">
+  <div class="popup-container">
+    <header class="popup-header">
+      <form class="search-bar" autocomplete="off">
+        <input
+          class="search-bar__input"
+          type="text"
+          placeholder="Enter the location"
+          id="bar"
+        />
+        <div class="search-bar__btn-group">
+          <button class="search-bar__btn btn--search">
+            <i class="fas fa-search"></i>
+          </button>
+          <a
+            href="#"
+            id="btn-location"
+            class="search-bar__btn search-bar__btn--location"
+          >
+            <i class="fas fa-crosshairs"></i>
+          </a>
+        </div>
+      </form>
+    </header>
+
+    <main class="popup-content">
+      <div id="weather-container">
+        <!-- Weather data will be inserted here by JS -->
+      </div>
+
+      <div class="forecast-container">
+        <!-- Forecast data will be inserted here by JS -->
+      </div>
+    </main>
+
+    <footer class="popup-footer">
+      <div class="settings">
+        <button id="btn-settings" class="btn-icon">
+          <i class="fas fa-cog"></i>
+        </button>
+        <button id="btn-refresh" class="btn-icon">
+          <i class="fas fa-sync-alt"></i>
+        </button>
+      </div>
+      <p class="copyright">
+        &copy; 2022 by <a href="https://github.com/kunal" target="_blank">Kunal</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html> 

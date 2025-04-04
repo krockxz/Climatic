@@ -16,6 +16,11 @@
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
+- [Chrome Extension Feature](#chrome-extension-feature)
+  - [Installing the Chrome Extension](#installing-the-chrome-extension)
+  - [Using the Extension](#using-the-extension)
+  - [Extension Settings](#extension-settings)
+- [Future Improvements](#future-improvements)
 
 ## Overview
 
@@ -30,6 +35,7 @@ Weather forecast app. Check the weather for any city in the world, with weather 
 ### Links
 
 - Live Site URL: [https://weather-kv.netlify.app/](https://weather-kv.netlify.app/)
+- Chrome Extension: [Download from Chrome Web Store](#) (Coming Soon)
 
 ## My process
 
@@ -46,6 +52,7 @@ Weather forecast app. Check the weather for any city in the world, with weather 
 - [Sass](https://sass-lang.com/) - CSS extension language
 - [jQuery](https://jquery.com/) - JS library
 - [Parcel](https://parceljs.org/) - Bundler
+- Chrome Extension API (Manifest V3)
 
 ### Steps
 
@@ -195,11 +202,11 @@ js
 
 ## Author
 
-- Github - [@vatsalsinghkv](https://github.com/vatsalsinghkv)
-- Twitter - [@vatsalsinghkv](https://www.twitter.com/vatsalsinghkv)
-- Instagram - [@vatsal.sing.hkv](https://www.instagram.com/vatsal.singh.kv)
-- Facebook - [@vatsalsinghkv](https://www.facebook.com/vatsal.singh.kv)
-- Frontend Mentor - [@vatsalsinghkv](https://www.frontendmentor.io/profile/vatsalsinghkv)
+- Github - [@kunal](https://github.com/kunal)
+- Twitter - [@kunal](https://www.twitter.com/kunal)
+- Instagram - [@kunal](https://www.instagram.com/kunal)
+- Facebook - [@kunal](https://www.facebook.com/kunal)
+- Frontend Mentor - [@kunal](https://www.frontendmentor.io/profile/kunal)
 
 ## Acknowledgements
 
@@ -207,4 +214,46 @@ js
 - [How to build a web app: A beginner's guide](https://budibase.com/blog/how-to-make-a-web-app/)
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer)
 - [Inspiration](https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv)
-- [Mentor](https://github.com/pandresvaldivia/Weather-app)
+
+## Chrome Extension Feature
+
+This project is now available as a Chrome Extension with the following features:
+
+- Access weather information directly from your browser toolbar
+- Auto-refresh weather data at customizable intervals
+- Save your preferences for temperature units
+- Offline support with cached weather data
+- Badge displaying current temperature
+- Responsive popup interface
+- Quick access to 7-day forecast
+
+### Installing the Chrome Extension
+
+1. Download the extension files from this repository
+2. Open Chrome and navigate to `chrome://extensions/`
+3. Enable "Developer mode" using the toggle in the top-right corner
+4. Click "Load unpacked" and select the folder containing the extension files
+5. The Weather App extension will now appear in your toolbar
+
+### Using the Extension
+
+- Click the extension icon to view current weather and forecast
+- Use the search bar to check weather for different locations
+- Click the location icon to get weather for your current location
+- Toggle between Celsius and Fahrenheit
+- Access settings by clicking the gear icon
+
+### Extension Settings
+
+- Choose default temperature units (Celsius or Fahrenheit)
+- Set auto-refresh intervals (15min, 30min, 1hr, or manual only)
+- Reset to default settings
+
+## Future Improvements
+
+- Add support for dark/light theme toggle
+- Implement weather notifications for severe conditions
+- Add more detailed hourly forecasts
+- Support for multiple saved locations
+- Enhanced accessibility features
+- Integration with calendar for event weather forecasting
