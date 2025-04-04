@@ -1,0 +1,39 @@
+{
+	"name": "weather-app",
+	"version": "1.0.0",
+	"description": "Check the weather for any city in the world, with weather forecast of next 7 days and relevant images of weather.",
+	"scripts": {
+		"start": "parcel index.html",
+		"clean-start": "rimraf .parcel-cache dist && parcel index.html",
+		"copy-assets": "node copy-assets.js",
+		"build": "parcel build index.html --dist-dir ./dist && npm run copy-assets",
+		"prebuild": "rimraf .parcel-cache dist",
+		"serve": "node serve.js",
+		"prod": "npm run build && npm run serve"
+	},
+	"author": "Kunal",
+	"license": "MIT",
+	"dependencies": {
+		"@parcel/transformer-image": "^2.11.0",
+		"@parcel/transformer-svg": "^2.11.0",
+		"dotenv": "^16.3.1",
+		"express": "^5.1.0",
+		"fs-extra": "^11.3.0",
+		"parcel": "^2.11.0",
+		"process": "^0.11.10",
+		"rimraf": "^5.0.10",
+		"weather-app": "file:"
+	},
+	"devDependencies": {
+		"@parcel/transformer-sass": "^2.11.0",
+		"autoprefixer": "^10.4.16",
+		"buffer": "^5.7.1",
+		"crypto-browserify": "^3.12.1",
+		"events": "^3.3.0",
+		"os-browserify": "^0.3.0",
+		"path-browserify": "^1.0.1",
+		"stream-browserify": "^3.0.0",
+		"string_decoder": "^1.3.0",
+		"vm-browserify": "^1.1.2"
+	}
+}
